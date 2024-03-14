@@ -1,0 +1,33 @@
+{
+  "name": "kafka-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm i --save-dev && jest --testTimeout=500000 --coverage",
+    "start": "node index.js",
+    "build": "npm install --no-package-lock && npm prune --production",
+    "bundle": "  npm-pack-zip ",
+    "format": "prettier --print-width 200 --write \"src/**/*.js\" \"test/**/*.js\" index.js",
+    "validate": "npm run format"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "src/"  
+  ],
+  "dependencies": {
+    "npm-pack-zip": "^1.2.7",
+    "kafkajs": "^2.2.4"
+  },
+ 
+  "devDependencies": {
+   
+  },
+  "lambdaDetails": {
+    "functionName": "kafka_client",
+    "aliasName": "final",
+    "bundleFileName": "kafka_client.zip"
+  }
+}
